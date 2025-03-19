@@ -9,7 +9,7 @@
 
 // LED-pins
 #define LED1 16  // Turns on when RFID1 reads a tag
-#define LED2 17  // Turns on when RFID2 reads a tag (currently unused, but you can adapt the code)
+#define LED2 17  // Turns on when RFID2 reads a tag 
 
 // RFID object
 Adafruit_PN532 nfc1(PN532_CS_1);
