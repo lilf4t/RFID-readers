@@ -30,15 +30,18 @@ Use the code for RC522 in src.
 circuit (shown for one reader):
 ![circuit_image](https://github.com/user-attachments/assets/5d2bf677-8822-41b8-a4c7-97af51176256)
 
-RFID RC522 Pins    	ESP32 Pins
-1 +3.3V	              +3.3V
-2	RST	                 G0
-3	GND	                 GND
-4	MISO	               19
-5	MOSI	               23
-6	SCK	                 18
-7	SS/SDA               5 (if using two readers, set the other one to 4)
 
-(LED optional, but if used, should connect the anod in series with a 1k resistor)
-8 LED                  16
-9 LED                  17
+| RFID RC522 Pins | ESP32 Pins                                      |
+|-----------------|-----------------------------------------------|
+| 1  +3.3V       | +3.3V                                        |
+| 2  RST         | G0                                           |
+| 3  GND         | GND                                          |
+| 4  MISO        | 19                                           |
+| 5  MOSI        | 23                                           |
+| 6  SCK         | 18                                           |
+| 7  SS/SDA      | 5 (if using two readers, set the other one to 4) |
+| **(LED optional, but if used, should connect the anode in series with a 1k resistor)** | |
+| 8  LED         | 16                                           |
+| 9  LED         | 17                                           |
+
+
