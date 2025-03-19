@@ -14,7 +14,7 @@ const char* mqtt_server = "";    // your wifi ip address
 
 The code will first search for available WiFi nearby, and then connect to both WiFi and MQTT, then it's ready for reading. The code is adjusted for two readers. Remove or add more readers at will.
 
-relevant datasheets:
+# Relevant datasheets:
 
 RFID RC522
 https://www.handsontec.com/dataspecs/RC522.pdf
