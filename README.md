@@ -6,9 +6,11 @@ Code for two leds included, will light up when a tag is read, can skip it.
 
 Fill in (both c++ code and python code) WiFi and MQTT credentials:
 
-<p align="left">const char* ssid = "";                  // wifi ssid  (has to be exact, otherwise, won't connect)</p> 
-const char* password = "";     // wifi password
-const char* mqtt_server = "";  // your wifi ip address
+```
+const char* ssid = "";           // wifi ssid  (has to be exact, otherwise, won't connect)
+const char* password = "";       // wifi password
+const char* mqtt_server = "";    // your wifi ip address
+```
 
 The code will first search for available WiFi nearby, and then connect to both WiFi and MQTT, then it's ready for reading. The code is adjusted for two readers. Remove or add more readers at will.
 
