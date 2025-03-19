@@ -28,7 +28,7 @@ https://www.edu.xunta.gal/centros/ieslaxeiro/system/files/ESP-32%20Dev%20Kit%20C
 # RFID-RC522
 Use the code for RC522 in src. 
 
-circuit (shown for one reader):
+circuit (shown for one reader using SPI bus):
 ![circuit_image](https://github.com/user-attachments/assets/5d2bf677-8822-41b8-a4c7-97af51176256)
 
 
@@ -46,10 +46,10 @@ circuit (shown for one reader):
 | 9  LED         | 17                                           |
 
 
-# PN532 NFC RFID (using the SPI bus)
+# PN532 NFC RFID 
 Use the code for PN532 in src. 
 
-circuit (shown for one reader):
+circuit (shown for one reader using SPI bus):
 ![circuit_image (1)](https://github.com/user-attachments/assets/35b70d5c-091e-4a12-85ed-17a12efc6288)
 
 
