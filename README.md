@@ -32,7 +32,7 @@ circuit (shown for one reader):
 ![circuit_image](https://github.com/user-attachments/assets/5d2bf677-8822-41b8-a4c7-97af51176256)
 
 
-| RFID RC522 Pins | ESP32 Pins                                      |
+|  RC522 Pins | ESP32 Pins                                      |
 |-----------------|-----------------------------------------------|
 | 1  +3.3V       | +3.3V                                        |
 | 2  RST         | G0                                           |
@@ -44,5 +44,25 @@ circuit (shown for one reader):
 | **(LED optional, but if used, should connect the anode in series with a 1k resistor)** | |
 | 8  LED         | 16                                           |
 | 9  LED         | 17                                           |
+
+
+# PN532 NFC RFID (using the SPI bus)
+Use the code for PN532 in src. 
+
+circuit (shown for one reader):
+![circuit_image (1)](https://github.com/user-attachments/assets/35b70d5c-091e-4a12-85ed-17a12efc6288)
+
+
+| PN532 Pins | ESP32 Pins                                      |
+|-----------------|-----------------------------------------------|
+| SCK            | 18                                        |
+| MISO           | 19                                        |
+| MOSI           | 23                                        |
+| SS            | 5  (if using two readers, set the other one to 4)                                        |
+| VCC           | +3.3V                                             |
+| GND           | GND                                            |
+| **(LED optional, but if used, should connect the anode in series with a 1k resistor)** | |
+| LED           | 16                                        |
+| LED           | 17                                        |
 
 
