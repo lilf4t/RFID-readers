@@ -14,7 +14,7 @@ def on_message(client, userdata, msg):
     print(payload_str)
 
 # Broker settings (update these if needed)
-broker_address = "172.20.10.3"
+broker_address = "" # use the same wifi ip address
 broker_port = 1883
 
 # Create an MQTT client instance.
