@@ -1,8 +1,12 @@
 # RFID reader test
 
 code to test RFID-RC522 and/or PN532 NFC RFID (both 13,56 MHz)
+
 Including communication with a simple python server through MQTT (optional).
+
+
 Code for two leds included, will light up when a tag is read, can skip it.
+
 
 Fill in (both c++ code and python code) WiFi and MQTT credentials:
 
