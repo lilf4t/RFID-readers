@@ -1,4 +1,4 @@
-# RFID reader test
+# RFID reader test with python server
 
 code to test RFID-RC522 and/or PN532 NFC RFID (both 13,56 MHz)
 
