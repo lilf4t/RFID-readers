@@ -36,7 +36,7 @@ void connectToWiFi() {
   WiFi.scanNetworks();
   Serial.println("Scanning networks");
 
-  // Print all available networks
+  // Print all available networks (If your network doesn't show up, the ESP32 is not recognizing it. Try a 2,4 GHz network if 5 GHz doesn't show up)
   Serial.print("Available networks: ");
   for (int i = 0; i < WiFi.scanComplete(); i++) {
     Serial.print(WiFi.SSID(i));
@@ -45,7 +45,7 @@ void connectToWiFi() {
   }
   delay(1000);
   Serial.print("Connecting to Wifi");
-  WiFi.mode(WIFI_STA); // This will connect to an existing network, if you want to create a new WiFi network, use WIFI_AP instead
+  WiFi.mode(WIFI_STA); // This will connect to an existing network, if you want to create a new WiFi network, use WIFI_AP instead (use one esp32 as an access point, and the others connecting to it)
   WiFi.begin(ssid, password);
 
   unsigned long start = millis();
@@ -91,7 +91,7 @@ void readAndHandleRFID(Adafruit_PN532 *nfc, int readerID, int ledPin, String &la
   uint8_t uid[] = { 0, 0, 0, 0, 0, 0, 0 };  
   uint8_t uidLength;     
 
-  success = nfc->readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength);
+  success = nfc->readPassiveTargetID(PN532_MIFARE_ISO14443A, uid, &uidLength, 100);
 
   if (success) {
     // --- Convert the UID to a String for easier handling ---
