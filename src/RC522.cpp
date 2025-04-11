@@ -10,7 +10,7 @@
 
 // LED-pins
 #define LED1 16  // Turns on when RFID1 reads a tag
-#define LED2 17  // Turns on when RFID1 reads a tag
+#define LED2 17  // Turns on when RFID2 reads a tag
 
 // RFID objects
 MFRC522 rfid1(SDA_PIN_1, RST_PIN);
@@ -41,7 +41,7 @@ void connectToWiFi() {
   WiFi.scanNetworks();
   Serial.println("Scanning networks");
 
-  // Print all available networks
+  // Print all available networks (If your network doesn't show up, the ESP32 is not recognizing it. Try a 2,4 GHz network if 5 GHz doesn't show up)
   Serial.print("Available networks: ");
   for (int i = 0; i < WiFi.scanComplete(); i++) {
     Serial.print(WiFi.SSID(i));
@@ -50,7 +50,7 @@ void connectToWiFi() {
   }
   delay(1000);
   Serial.print("Connecting to Wifi");
-  WiFi.mode(WIFI_STA); // This will connect to an existing network, if you want to create a new WiFi network, use WIFI_AP instead
+  WiFi.mode(WIFI_STA); // This will connect to an existing network, if you want to create a new WiFi network, use WIFI_AP instead (have one ESP32 as an access point, and the other connecting to it)
   WiFi.begin(ssid, password);
 
   unsigned long start = millis();
@@ -129,7 +129,6 @@ void setup() {
     Serial.println("-----------------------------------------------------------");
 }
 
-// Read RFID tags from the specified reader and control the specified LED
 // Read RFID tags from the specified reader and control the specified LED
 void readRFID(MFRC522 &rfid, byte *nuidPICC, int readerID, int ledPin) {
     if (!rfid.PICC_IsNewCardPresent()) return;
